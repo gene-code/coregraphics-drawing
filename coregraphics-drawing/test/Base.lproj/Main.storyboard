@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="landscape">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="UEi-iV-MsJ">
+                                <rect key="frame" x="33.5" y="0.0" width="600" height="300"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="D5r-d8-uai"/>
+                                    <constraint firstAttribute="width" constant="600" id="OCC-af-kS9"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rect" translatesAutoresizingMaskIntoConstraints="NO" id="Sd6-H4-fmi">
+                                <rect key="frame" x="132.5" y="302" width="402" height="73"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="402" id="eNQ-FB-AdM"/>
+                                    <constraint firstAttribute="height" constant="73" id="mrC-sx-gKc"/>
+                                </constraints>
+                            </imageView>
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="6.2000000000000002" translatesAutoresizingMaskIntoConstraints="NO" id="sQ6-ke-ng7">
+                                <rect key="frame" x="6" y="308" width="118" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="rotateRect:" destination="BYZ-38-t0r" eventType="valueChanged" id="IYZ-5U-2iY"/>
+                                </connections>
+                            </slider>
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="600" translatesAutoresizingMaskIntoConstraints="NO" id="Djf-TF-Nh7">
+                                <rect key="frame" x="542" y="302" width="118" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="moveRectX:" destination="BYZ-38-t0r" eventType="valueChanged" id="PaL-eY-bgi"/>
+                                </connections>
+                            </slider>
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="600" translatesAutoresizingMaskIntoConstraints="NO" id="1Rp-lO-rjR">
+                                <rect key="frame" x="542" y="339" width="118" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="moveRectY:" destination="BYZ-38-t0r" eventType="valueChanged" id="gt4-uN-iZP"/>
+                                </connections>
+                            </slider>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Sd6-H4-fmi" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="8vl-XJ-hrn"/>
+                            <constraint firstItem="UEi-iV-MsJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="T6T-fm-yTy"/>
+                            <constraint firstItem="UEi-iV-MsJ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="fmp-J5-4jq"/>
+                            <constraint firstItem="Sd6-H4-fmi" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="t0x-yG-fs7"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="mainImgView" destination="UEi-iV-MsJ" id="0W3-vP-r3h"/>
+                        <outlet property="rectImgView" destination="Sd6-H4-fmi" id="2sm-hf-hHJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="37.331334332833585" y="24.800000000000001"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="rect" width="401" height="72"/>
+    </resources>
+</document>
